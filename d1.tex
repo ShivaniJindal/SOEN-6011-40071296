@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage[noend]{algorithmic}
+\usepackage{setspace}
+\usepackage{clrscode3e}
+
+\begin{document}
+\title{40071296 - Deliverable1}
+
+\LARGE{\author{
+	Shivani Jindal \\
+	40071296\\
+	SOEN 6011\\
+	Software Engineering Processes\\
+	Department of Software Engineering and Computer Science\\
+	Concordia University\\
+	Montreal }}
+\maketitle
+
+\begin{figure} [h]
+	\centering
+	\includegraphics[height=1in,width=3.8in]{C:/Users/Hp/Desktop/Latex/gamma.jpg}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2.35in,width=4in]{C:/Users/Hp/Desktop/Latex/gf.png}
+\end{figure}
+
+\onehalfspacing
+
+\newpage
+\tableofcontents
+\newpage
+
+
+{\bfseries{PROBLEM 1 } }
+
+The gamma function is a continuous extension to the factorial function, which is only defined for the complex numbers and non-negative integers. The gamma function is defined as:
+\begin{figure} [h]
+	\centering
+	\includegraphics[height=0.5in,width=3.1in]{C:/Users/Hp/Desktop/Latex/g1.jpg}
+\end{figure} 
+\newline
+If p>0, then, integration by parts yields the formula Γ(p+1)=pΓ(p)Γ(p+1)=pΓ(p). Using this formula, one can extend the domain of definition inductively by setting first Γ(p)=Γ(p+1)pΓ(p)=Γ(p+1)p for −1<p<0−1<p<0.
+\begin{itemize}
+	\item The gamma function does not satisfy any algebraic differential equation.
+	\item It is applicable in the fields of probability and statistics, as well as combinatorics.
+\item The gamma function  is an analytical function of, which is defined over the whole complex ‐plane with the exception of countably many points.
+\item The function has an infinite set of singular points, which are the simple poles with residues. 
+\item The function  does not have branch points and branch cuts.
+\item The function  does not have periodicity.
+\item The function  has mirror symmetry.
+\item The gamma function satisfies the recursive property:
+\begin{figure} [h]
+	\centering
+	\includegraphics[height=0.4in,width=2.6in]{C:/Users/Hp/Desktop/Latex/g2.jpg}
+\end{figure}
+\end{itemize}
+
+\newpage
+
+{\bfseries{PROBLEM 2 } }
+\newline
+\begin{table}[h!]
+	\begin{center}
+		\label{tab:table1}
+		\scalebox{1.5}{
+		\begin{tabular}{ l| l  } 
+			\textbf{Unique Identifier} & \textbf{Requirements} \\
+				& \textbf{(FR-> Functional requirements)}\\
+				&  \textbf{(NFR-> Non-functional requirements)} \\
+			\hline
+FR1 & Defined for only positive numbers. x>0 \\
+\hline
+\newline & \newline\\
+FR2 & Integration is an asset so knowledge of integral is important \\
+& aspect in order to calculate gamma function.\\
+\hline
+\newline & \newline\\
+FR3 & Integral function is required to calculate gamma function.\\
+\hline
+\newline & \newline\\
+FR4 & Power function is required to calculate gamma function.\\
+\hline
+\newline & \newline\\
+FR5 & Advance form of factorial is its main key as it supports recursion,\\
+& knowledge of factorial is needed to calculate gamma function.It \\
+&  is recursive to real numbers but not to non-positive numbers.\\
+\hline
+\newline & \newline\\
+FR6 & Exponential function is required to calculate gamma function\\
+\hline
+\newline & \newline\\
+NFR1 Scalability & The Gamma distribution has the scaling property so that if X is a \\ & random variable that follows a Gamma distribution, so does cX \\ & for c>0. To scale the distribution, multiply θ by c: cX∼Gamma(k,cθ)
+So if you \\ & want it to scale a distribution with k=2 and θ=2 to the range \\ &  (0,1000)you could multiply θ by 1000.\\
+\hline
+\newline & \newline\\
+NFR2 Efficiency & The Gamma distribution is not give exact values but they are \\ &  very close to the approximations.\\
+\hline
+\newline & \newline\\
+NFR3 Modifiability & There are multiple ways available to calculate the gamma\\ & distribution.\\
+\hline
+\newline & \newline\\
+NFR4 Robust	& The Gamma distribution is applied across various real world\\ & machines such as calculator.
+\end{tabular}}
+	\end{center}
+\end{table}
+
+\newpage
+{\bfseries{PROBLEM 3 } }
+\newline
+\begin{codebox}
+	\Procname{$\proc{Striling's Approximation - Gamma function}gamma(x)$}
+	\li \For $j \gets 1$ \To $n$
+	\li  sqrt $(2 * \pi / x) $   
+	\li  power $((x / \exp),  x)$
+	\li \Comment Multiply 1 and 2.
+	\li gamma \gets sqrt $(2 * \pi / x)    * ((x / \exp),  x)$
+	\li gamma $(i/10.0)$
+	\End
+\end{codebox}
+
+\begin{codebox}
+	\Procname{$\proc{Lanczos Approximation - Gamma function}gamma(x)$}
+	\li \For $j \gets 1$ \To $n$
+	\li	$ g \gets 7$
+	\li double $[ ] p \gets 0.99999999999980993,.....$
+	\li	if $(x < 0.5)$ 
+	\li  $ \pi / (sin(\pi * x)*gamma(1-x))$
+	\li	$x  -\gets 1$
+	\li	double $a \gets p[0] $
+	\li double $ t \gets x+g+0.5$
+	\li	\For $ i \gets 1 \To \attrib{p}{length}$
+	\li $ a += p[i]/(x+i)$
+	\End
+	\li sqrt $(2 * \pi) * power (t, x+0.5)* exp(-t)*a$
+	\li gamma $(i/10.0)$
+	\End
+\end{codebox}
+\newpage
+The methods of Stirling and Lanczos share the common strategy of terminating an infinite series and estimating the error which results. Also in common among these two methods, is a free parameter which controls the accuracy of the approximation.
+Stirling’s asymptotic series forms the basis for most computational algorithms for the gamma function and much has been written on its implementation. An example on the use of Stirling’s series is given with a short discussion of error bounds.
+Although not quite as accurate as Lanczos’ method using the same number of terms of the series and difficult to compute.\\
+The conclusion is that each method has its merits and shortcomings, and the question of which is best has no clear answer. For a uniformly bounded relative error, Lanczos’ method seems most efficient, while Stirling’s series yields very accurate results for z of large modulus due to its error term which decreases rapidly with increasing |z|. 
+\newline
+Out of the two implementation algorithms for the Gamma function, i will choose Lanczo's approximation method over Striling's approximation. Although Striling is easy to compute but still lacks accuracy where as Lanczo is more accurate, precise, efficient and can deal with relative error.
+
+
+\newpage
+\bibliographystyle{unsrt}  
+%\bibliography{references} 
+\begin{thebibliography}{1}
+
+\bibitem{}
+\newblock Wikipedia, W. Gamma Function. [online] En.wikipedia.org.
+
+\bibitem{}
+Glendon Ralph Pugh
+\newblock An analysis of the Lanczos Gamma Approximation.
+\newblock {\em The University of British Columbia}, November 2004.
+
+\bibitem{}
+Rosetta Code
+\newblock Gamma Function.
+
+\bibitem{}
+\newblock CLRS Algorithms
+\newblock tex.stackexchange.com
+
+\bibitem{}
+\newblock Properties of the Gamma function.  
+\newblock www.jekyll.math.byuh.edu
+
+\bibitem{}
+Wolfram Research
+\newblock Introduction to the Gamma function.
+\newblock functions.wolfram.com
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
