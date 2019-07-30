@@ -19,7 +19,7 @@
 \usepackage[noend]{algorithmic}
 \usepackage{setspace}
 \usepackage{clrscode3e}
-\usepackage[pass,showframe]{geometry}% just to show the page margins
+
 
 \begin{document}
 
@@ -75,7 +75,39 @@ ADVANTAGES:-
 \item	Eclipse run very slowly.
 \end{itemize}
  
+ \newpage
+{\huge QUALITY ATTRIBUTES} \\
+\newline
+ \textbf{CORRECTNESS:-} \\
+ Below are some of the important rules for effective programming which are consequences of the program correctness theory.
+ \begin{itemize} [noitemsep,topsep=0pt]
+ 	\item Defining the problem completely :- \\ I precisely described my function in Deliverable 1 along with its requirements.
+ 	\item Develop the algorithm and then the program logic :- \\ I mentioned two algorithms named Striling and Lanczos in Deliverable 1 and than used Lanczos for code implementation and it is giving accurate results.
+ 	\item Developers should pay attention to the clarity and simplicity of your program :- \\ Program is very clean and easy to understand as all sub-functions which are needed to implement Gamma function are coded as separate functions rather than putting everything in main function.
+ \end{itemize}
+ Types of correctness:-
+ \begin{itemize}
+ 	\item Semantic Correctness:- I tried to use as much as i can the Variable names suitable to task or function performed by the code.
+ 	\item Syntactic Correctness:- I coded my program adherent to java code rules.	
+ \end{itemize}
+
+ \textbf{EFFICIENCY:-}\\
+ It  tests the amount of resources required by a program to perform a specific function. \\
+ My program is quite efficient as all functional requirements and resources it needs to run are available itself in code as sub-functions.
+ \newline
+ \textbf{MAINTAINABLE:-}\\
+ Maintainability is defined as the degree to which a source code is understood, repaired, or enhanced. \\
+ My code is not fully based on main function, it is divide into sub-functions so in case one needs to make changes in code its esay to understand and make without modifying main function. Moreover, i have provided comments inline with code which increase the understand ability of code for readers.
+ \newline
+\textbf{ ROBUST:-}\\
+ Robustness is the ability of a computer system to cope with errors during execution and cope with erroneous input.\\
+ My program has support for error handling, exceptions are thrown to handle errors.
+ \newline
+\textbf{ USABLE:-} \\
+ In software engineering, usability is the degree to which a software can be used by specified consumers to achieve quantified objectives with effectiveness, efficiency, and satisfaction in a quantified context of use.\\
+ I have used textual interface for running my code. Its very easy, at run time it will show you message stating "Enter  number to compute gamma function" and  gives you result in less than 1 minute. It is very eay to use and very effective and fast.
  
+
  \newpage
  
  \noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
@@ -106,6 +138,36 @@ ADVANTAGES:-
  \end{itemize}
 
 \newpage
+{\huge MAPPING OF REQUIREMENTS WITH TEST CASES} \\
+\newline
+\begin{table}[h!]
+	\begin{center}
+		\label{tab:table1}
+		\scalebox{1.5}{
+			\begin{tabular}{ l| l  } 
+				\textbf{Requirements Identifier} & \textbf{Test Cases} \\
+				
+				\hline
+		     	\newline & \newline\\
+				FR1 & testX() \\
+				\hline
+				\newline & \newline\\
+				FR3 & testSin() \\
+				\hline
+				\newline & \newline\\
+				FR4 & testPow(), testLog(), testFracPower()\\
+				\hline
+				\newline & \newline\\
+				FR5 & testFactorial()\\
+				\hline
+				\newline & \newline\\
+				FR6 & testExp()\\
+				\hline
+				\newline & \newline\\
+\end{tabular}}
+\end{center}
+\end{table}
+\newpage
 \bibliographystyle{unsrt}  
 %\bibliography{references} 
 \begin{thebibliography}{1}
@@ -127,5 +189,23 @@ Eclipse Platform Technical Overview.
 Checkstyle
 \newblock https://checkstyle.sourceforge.io/
 \newblock Version: 8.23, Last Published: 2019-07-27 
-	
+
+\bibitem{}
+\newblock Wikipedia, W. Usability. [online] En.wikipedia.org.
+
+\bibitem{}
+\newblock Wikipedia, W. Correctness. [online] En.wikipedia.org.
+
+\bibitem{}
+\newblock Wikipedia, W. Robustness. [online] En.wikipedia.org.
+
+\bibitem{}
+ Maintainability
+\newblock www.castsoftware.com.
+
+\bibitem{}
+Efficiency
+\newblock https://economictimes.indiatimes.com/definition/efficiency-testing?from=mdr
+
+\end{thebibliography}
 \end{document}
