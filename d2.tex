@@ -1,0 +1,131 @@
+\documentclass[10pt]{article}
+
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[noend]{algorithmic}
+\usepackage{setspace}
+\usepackage{clrscode3e}
+\usepackage[pass,showframe]{geometry}% just to show the page margins
+
+\begin{document}
+
+\title{40071296 - Deliverable2}
+
+\LARGE{\author{
+	Shivani Jindal \\
+	40071296\\
+	SOEN 6011\\
+	https://github.com/ShivaniJindal/SOEN-6011-D1\\
+	Software Engineering Processes\\
+	Department of Software Engineering and Computer Science\\
+	Concordia University\\
+	Montreal\\
+https://github.com/ShivaniJindal/SOEN-6011-40071296 }}
+\maketitle
+
+\begin{figure} [h]
+	\centering
+	\includegraphics[height=1in,width=3.8in]{C:/Users/Hp/Desktop/Latex/gamma.jpg}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2.35in,width=4in]{C:/Users/Hp/Desktop/Latex/gf.png}
+\end{figure}
+
+\onehalfspacing  
+\newpage
+
+\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+	\includegraphics[width=\linewidth]{C:/Users/Hp/Desktop/Latex/background.jpg}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.6\textwidth}\raggedleft
+	DEBUGGER\\
+	Advantages and Disadvantages.
+\end{minipage}
+\newline
+\newline
+The Eclipse Platform is designed for building (IDEs) integrated development environments, and arbitrary tools. The Eclipse Platform UI is built around a workbench that includes menu and tool bar actions for running and debugging arbitrary programs, and provides a generic debug perspective better suited to that task. \\
+ADVANTAGES:-
+\begin{itemize} [noitemsep,topsep=0pt]
+	\item When a Java program is launched in debug mode, a debug view shows the processes, threads, and stack frames.
+	\item During single stepping, the debugger instructs the editor which source
+	code line to highlight. Debug-specific views show the list of breakpoints, the values of variables, and the fields of objects. Breakpoints are represented by a special type of marker.
+	\item It don't require several recompiles for what might be a small problem and
+	often allow debugger-time altering of the variables, which might be handy as well.
+\end{itemize}
+	DISADVANTAGES:-
+	\begin{itemize} [noitemsep,topsep=0pt]
+\item	Sometimes Eclipse can get into a bad state and one have to clear the caches and restart or go through elaborate build-clean-build processes to fix it.
+\item	Eclipse run very slowly.
+\end{itemize}
+ 
+ 
+ \newpage
+ 
+ \noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+ 	\includegraphics[width=\linewidth]{C:/Users/Hp/Desktop/Latex/cs.jpg}
+ \end{minipage}%
+ \hfill%
+ \begin{minipage}{0.6\textwidth}\raggedleft
+ 	CHECKSTYLE\\
+ 	Advantages and Disadvantages.
+ \end{minipage}
+ \newline
+ \newline
+ Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. It automates the process of checking Java code to spare humans of this boring (but important) task. This makes it ideal for projects that want to enforce a coding standard. \\
+ \newline
+ ADVANTAGES:-
+ \begin{itemize} [noitemsep,topsep=0pt]
+ 	\item Check many aspects of your source code such as it can find class design problems, method design problems. 
+ 	\item It has the ability to check code layout and formatting issues.
+ 	\item Checks that the parts of a class or interface declaration appear in the order suggested by the Code Conventions for the Java Programming Language.
+ 	 \end{itemize}
+
+ DISADVANTAGES:-
+ \begin{itemize} [noitemsep,topsep=0pt]
+ 	\item Java code should be written with ASCII characters only, no UTF-8 support.
+ 	\item To get valid violations, code have to be compilable, in other case you can get not easy to understand parse errors.
+ 	\item You cannot determine the full inheritance hierarchy of type.
+ 	\item You cannot see the content of other files. All files are processed one by one.
+ \end{itemize}
+
+\newpage
+\bibliographystyle{unsrt}  
+%\bibliography{references} 
+\begin{thebibliography}{1}
+	
+\bibitem{}
+Eclipse Reviews.
+\newblock https://www.trustradius.com/products/eclipse/reviews
+	
+\bibitem{}
+Software Engineering.
+\newblock https://softwareengineering.stackexchange.com/
+questions/168540/what-are-the-advantages-of-using-the-java-debugger-over-println
+	
+\bibitem{}
+Eclipse Platform Technical Overview.
+\newblock {\em International Business Machines Corp}, 2006.
+
+\bibitem{}
+Checkstyle
+\newblock https://checkstyle.sourceforge.io/
+\newblock Version: 8.23, Last Published: 2019-07-27 
+	
+\end{document}
