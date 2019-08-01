@@ -1,0 +1,189 @@
+\documentclass[10pt]{article}
+
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[noend]{algorithmic}
+\usepackage{setspace}
+\usepackage{clrscode3e}
+
+
+\begin{document}
+
+\title{40071296 - Deliverable3}
+
+\LARGE{\author{
+	Shivani Jindal \\
+	40071296\\
+	SOEN 6011\\
+	Software Engineering Processes\\
+	Department of Software Engineering and Computer Science\\
+	Concordia University\\
+	Montreal\\
+https://github.com/ShivaniJindal/SOEN-6011-40071296 }}
+\maketitle
+
+\begin{figure} [h]
+	\centering
+	\includegraphics[height=1in,width=3.8in]{C:/Users/Hp/Desktop/Latex/gamma.jpg}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2.35in,width=4in]{C:/Users/Hp/Desktop/Latex/gf.png}
+\end{figure}
+
+\onehalfspacing  
+\newpage
+
+\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+	\includegraphics[width=\linewidth]{C:/Users/Hp/Desktop/Latex/review.jpg}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.6\textwidth}\raggedleft
+	CODE REVIEW \\
+\end{minipage}
+\\
+\newline
+\newline
+Code review is a widely-used technique for improving software quality by human inspection. Code review can detect many kinds of problems in code, but as a starter, this reading talked about these general principles of good code:
+\begin{itemize}
+	\item Comments where needed
+	\item Avoid magic numbers
+	\item One purpose for each variable
+	\item Use good names
+	\item No global variables
+	\item Easy to understand
+	\item Ready to change
+	\item Return results, don’t print them
+	\item Use white-space for readability
+\end{itemize}
+\newpage
+ \textit{Results for source code reviewed of F6, coded by Girish Kumar Kadapa.}\\
+\newline
+ \textbf{1. Formatting:-} \\
+\textbf{ Q1.1:} Are the spaces and line breaks are at right place? \\
+ Indentation is good, no extra spaces and line breaks are there.It is readable. But due to nested if-else it becomes at some places hard to understand.
+ \newline
+\textbf{Q1.2:} Is he using tabs or spaces? \\
+Spaces has been used.
+\newline
+\textbf{Q1.3:} How are the curly braces laid out?\\
+ It is according to java standards. They are starting just one space next to condition and ending just next to the start of another condition. However, closing of braces is not properly spaced so in case of nested if-else it becomes harder to find ending of the braces when there is no start of another condition. \\
+ \newline
+ \textbf{2. Style:-}\\
+\textbf{Q2.1:} Are the variables/parameters declared as final? \\
+None of the parameter is declared final which is not required as we are computing mathematical function in which values of each sub-function will get updated depending upon inputs, it cannot be fixed whereas there are some constants such as denominator, sign which should be declared as final in order to avoid mathematical error.
+\newline
+\textbf{Q2.2:} Are method variables defined close to the code where they’re used or at the start of the method?\\
+Variables which are required to calculate main function, F6 are declared at class level but are used only at function level. Other all variables are declared at method level only where they are needed.\\
+\newline
+ \textbf{3. Naming:-}\\ 
+\textbf{Q3.1:} Do the field/constant/variable/parameters/class names conform to standards?\\
+ Yes, names of variables/classes/methods all are adherent to Java coding rules, standards and guidelines.\\
+\newline
+\textbf{4. Design:-}\\
+\textbf{Q4.1:} Does the code follow SOLID principles ?\\
+S:- Single Responsibility Principle \\
+Yes, code follows this principle as for all sub-functions different methods has been made which are their own sufficient to make calculations.
+\newline
+O:- Open/Closed Principle\\
+Code does not follow this principle.
+\newline
+L:- Liskov Substitution Principle\\
+Yes, code follows this principle as output of one function can sub substitute as input for another function.
+\newline
+I:- Interface segregation principle\\
+No, here that principle is not required as it is the code of only one mathematical function for which all the sub-functions coded are required to evaluate and there is nothing like option or additional functionality.
+\newline
+D:- Dependency inversion principle\\
+Yes, code do satisfy this principle.
+\newline
+\textbf{Q4.2:} Do I understand what the code does?\\
+Yes, it is fully understandable as per programmer perspective as well as per user as interface is very user-friendly.
+\newline
+\textbf{Q4.3:} Does the code function as I expect it to? \\
+Yes, it computes accurate values for given mathematical function.
+\newline
+\textbf{Q4.4:} Does this code fulfill regulatory requirements?\\
+Yes, it fulfills all the listed requirements in Deliverable 1.\\
+\newline
+\textbf{5. Readability and Maintainability :-}
+ \newline
+\textbf{Q5.1:} Do the names (of fields, variables, parameters, methods and classes) actually reflect the thing they represent?\\
+Class name is not reflect the function for which code is.\\
+Function in which all sub-functions are called to calculate the given function named as function 6 which is very vague as the coder who is not part of this course will never know what function 6 stands for.\\
+Other two method names are suitable to their role and all variables too.
+\newline
+\textbf{Q5.2:} Can I understand what the code does by reading it?\\
+Yes, it is very easy to understand as code has complementary inline comments which are making things easy to understand and read.
+\newline
+\textbf{Q5.3:} Are the exception error messages understandable?\\
+Yes they are but general exception is thrown  not specific according to the code.
+
+ \newpage
+ \textit{Results for test code reviewed of F7, coded by Jasmine Kalra.}\\
+ \newline
+\textbf{Q 1:} Can I understand what the tests do?\\
+Tests for Main file are clear written in Main.test file. However, the ones written for Calculate.java are misleading as the inline comments are referring to Main.java but as per the file names, it states they are belong to Calculate.java file. In addition to this, the names of test cases in CalculateTest.java file are very confusing, multiple test cases for one function does not give clear categorization of why those have been made and what is their purpose.\\
+\newline
+\textbf{Q 2:} Do the tests cover a good subset of cases? \\
+ Yes, they do cover most of them as per the visibility and coverage, but not all.\\
+ \newline
+\textbf{Q 3:} Do they cover exceptional cases?\\
+ Yes, for every possible mathematical real number code has been tested against for mathematical function.\\
+ \newline
+\textbf{Q 4:} Are there cases that haven’t been considered?\\
+ Yes, there are as most of the test cases are focused on negative integers, there is no test case which is testing combination of positive and negative real numbers.\\
+ \newline
+\textbf{Q 5:} Are confusing sections of code either documented, commented, or covered by understandable tests (according to team preference)?\\
+ No, there is very poor inline documentation of code in terms of comments. Purpose of test cases and what they are testing is very hard to understand.\\
+ \newline
+\textbf{Q 6:} Does tests covered all stated requirements?\\
+ Yes, it do covers.\\
+ \newline
+\textbf{Q 7:} Is the test testing only one code unit at a time? \\
+ Yes, each test is only for specific functionality of source code.\\
+ \newline
+\textbf{Q 8:} Are the test cases dependent on each other?\\
+No, they are independent.\\
+\newline
+\textbf{Q 9:} Do the test cases names conform to standards?\\
+Names are written according to standards but names themselves are not as per standards as they are confusing, same name used mostly for all test cases just with the difference of count.\\
+\newline
+\textbf{Q 10:} Do the most appropriate assertion methods are used ?\\
+Yes.
+ 
+\newpage
+\bibliographystyle{unsrt}  
+%\bibliography{references} 
+\begin{thebibliography}{1}
+	
+\bibitem{}
+Lokesh Gupta, JUnit Best Practices Guide
+\newblock https://howtodoinjava.com/best-practices/unit-testing-best-practices-junit-reference-guide/
+	
+\bibitem{}
+Reading 4: Code Review
+\newblock http://web.mit.edu/6.005/www/fa15/classes/04-code-review/
+	
+\bibitem{}
+What to look for in a Code Review
+\newblock {\em 	Posted on July 23, 2015 by Trisha Gee}
+\newblock https://blog.jetbrains.com/upsource/2015/07/23/what-to-look-for-in-a-code-review/
+
+\end{thebibliography}
+\end{document}
